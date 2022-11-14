@@ -1,0 +1,24 @@
+Iniciando juego
+robot ha seleccionado: barco
+robot ha tocado un barco de niño
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: barco
+niño ha tocado un barco de robot
+El niño se despista
+El robot le dice: espabila hombre
+niño ha seleccionado: agua
+Pasando turno de niño a robot
+robot ha seleccionado: barco
+robot ha tocado un barco de niño
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: barco
+niño ha tocado un barco de robot
+niño ha seleccionado: agua
+Pasando turno de niño a robot
+El niño se despista
+El robot le dice: espabila hombre
+robot ha seleccionado: barco
+robot ha tocado un barco de niño
+niño ha perdido y robot ha ganado
