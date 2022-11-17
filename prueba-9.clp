@@ -3,7 +3,7 @@
         (of JUGADOR (nombre robot) (jugando si))
         (of JUGADOR (nombre niño) (jugando no))
 
-        (of PERSONALIDAD (nombre pesimista) (reaccion "he perdido la fe en que pueda ganar esta partida") (correccion "le dice: yo confio en tus posibilidades"))
+        (of PERSONALIDAD (nombre pesimista) (reaccion "ha perdido la fe en que pueda ganar esta partida") (correccion "le dice: yo confio en tus posibilidades"))
 
         (of CASILLA (posicion 1) (tipo mina) (propietario ambos) (accion daño))
         (of CASILLA (posicion 2) (tipo numero) (propietario ambos) (accion cambiar))

@@ -1,0 +1,10 @@
+Iniciando juego
+robot ha seleccionado: numero
+Pasando turno de robot a niño
+El niño llora
+El robot da animos
+niño ha seleccionado: numero
+Pasando turno de niño a robot
+robot ha seleccionado: mina
+robot ha pisado una mina.
+robot ha perdido y niño ha ganado

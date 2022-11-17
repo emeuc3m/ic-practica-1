@@ -3,7 +3,7 @@
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))
         (of JUGADOR (nombre niño) (jugando no) (vidas 4))
 
-        (of PERSONALIDAD (nombre impaciente) (reaccion "podrías darte más prisa") (correccion "le dice: tienes que aprender a no ser tan impaciente"))
+        (of PERSONALIDAD (nombre impaciente) (reaccion "le dice: podrías darte más prisa") (correccion "le dice: tienes que aprender a no ser tan impaciente"))
         
         (of CASILLA (posicion 1) (tipo barco) (propietario robot) (accion daño))
         (of CASILLA (posicion 2) (tipo agua) (propietario robot) (accion cambiar))

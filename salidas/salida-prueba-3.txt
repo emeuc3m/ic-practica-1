@@ -1,0 +1,15 @@
+Iniciando juego
+robot ha seleccionado: bandera
+robot ha seleccionado: bandera
+robot ha seleccionado: bandera
+robot ha seleccionado: numero
+Pasando turno de robot a niño
+El niño quiere jugar ya
+El robot le dice: tranquilo que ya voy
+niño ha seleccionado: bandera
+niño ha seleccionado: bandera
+niño ha seleccionado: numero
+Pasando turno de niño a robot
+robot ha seleccionado: mina
+robot ha pisado una mina.
+robot ha perdido y niño ha ganado

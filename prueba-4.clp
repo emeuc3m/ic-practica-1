@@ -3,7 +3,7 @@
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))
         (of JUGADOR (nombre niño) (jugando no) (vidas 7))
 
-        (of PERSONALIDAD (nombre pesimista) (reaccion "seguro que voy a perder esta partida") (correccion "le dice: tranquilo seguro que me acabas ganando"))
+        (of PERSONALIDAD (nombre pesimista) (reaccion "estoy seguro que voy a perder esta partida") (correccion "le dice: tranquilo seguro que me acabas ganando"))
         
         (of CASILLA (posicion 1) (tipo barco) (propietario robot) (accion daño))
         (of CASILLA (posicion 2) (tipo agua) (propietario robot) (accion cambiar))
