@@ -13,6 +13,10 @@
         (type INTEGER)
         (default 3)
     )
+    (slot intervencion ;; Número de vidas que se restan cuando se ejecuta una intervención
+        (type INTEGER)
+        (default 3)
+    )
 )
 
 ;; Clase para los jugadores, en la que se define el tipo de jugador, si en ese momneto esta jugando y las vidas, que es un contador 

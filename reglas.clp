@@ -6,19 +6,18 @@
     (assert (iniciado si))
     (printout t "Iniciando juego" crlf)
 )
-
 ;; Regla de parada, que comprueba que las vidas de un jugador sean 0 y que las vidas del otro jugador son mas de 0.
 ;; Para poder determinar que el jugador contrario ha ganado
 (defrule parada
     (declare (salience 100))
     ?jugador_gana <- (object (is-a JUGADOR) (nombre ?g) (vidas ?v))
-    ?jugador_pierde <- (object (is-a JUGADOR) (nombre ?p) (vidas 0))
+    ?jugador_pierde <- (object (is-a JUGADOR) (nombre ?p) (vidas ?vp))
     (test (> ?v 0))
+    (test (< ?vp 1)) ;; Por la regla de intervención, el número de vidas puede ser menor que 0
     =>
     (printout t ?p " ha perdido y " ?g " ha ganado" crlf)
     (halt)
 )
-
 ;; Regla de parada por la personalidad con la misma prioridad que la otra regla de parada. Se comprueba que el slot paciencia de la clase
 ;; personalidad es 0
 (defrule parada-personalidad
@@ -27,6 +26,17 @@
     =>
     (printout t "La sesión se para porque el niño ha reaccionado negativamente demasiadas veces." crlf)
     (halt)
+)
+;; Regla especial para ejecutar cuando la paciencia llega a un número determinado
+(defrule intervencion-personalidad
+    ?robot <- (object (is-a JUGADOR) (nombre robot) (vidas ?v))
+    ?per <- (object (is-a PERSONALIDAD) (reaccion ?r) (correccion ?c) (paciencia 3) (intervencion ?i))
+    (not (intervencion si))
+    =>
+    (assert (intervencion si))
+    (modify-instance ?robot (vidas (- ?v ?i)))
+    (printout t "El robot decide intervenir quitándose " ?i " vidas " crlf)
+    (printout t "Vidas del jugador robot: " (- ?v ?i) crlf)
 )
 
 ;; Regla para ejecutar las personalidades y las correcciones en las diferentes pruebas que vamos a ejecutar
@@ -70,7 +80,8 @@
     (unmake-instance ?casilla) ;; Se elimina la instancia para la casilla actual, porque ya se ha utilizado
     (retract ?fact)
     (retract ?cs)
-    (printout t ?s " ha dañado a " ?n  crlf)
+    (printout t ?s " ha tocado un barco de " ?n  crlf)
+    (printout t "Vidas del jugador " ?n ": " (- ?v 1) crlf)
 )
 
 ;; Regla en la que te dañas a ti mismo, o recibes tu el daño. Para juegos en los que se juega 
@@ -86,7 +97,8 @@
     (unmake-instance ?casilla) ;; Se elimina la instancia para la casilla actual, porque ya se ha utilizado
     (retract ?fact)
     (retract ?cs)
-    (printout t ?n " ha recibido daño"  crlf)
+    (printout t ?n " ha pisado una mina"  crlf)
+    (printout t "Vidas del jugador " ?n ": " (- ?v 1) crlf)
 )
 
 ;; Regla para cuando se selecciona una casilla cuya accion hace que el turno lo mantenga el mismo jugador
