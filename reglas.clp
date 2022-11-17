@@ -57,11 +57,11 @@
     (printout t ?n " ha seleccionado: " ?t  crlf)
 )
 
-;; Regla para cuando se selecciona una casilla de tipo barco
-(defrule casilla_barco
+;; Regla en la que se daña al oponente, para juegos en los que se juega con dos tableros
+(defrule casilla_dañar
     ?jugadorsi <- (object (is-a JUGADOR) (nombre ?s) (jugando si)) ;; Jugador que esta jugando
     ?jugadorno <- (object (is-a JUGADOR) (nombre ?n) (jugando no) (vidas ?v)) ;; Jugadro que no esta jugando
-    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (tipo barco) (propietario ?n))
+    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion dañar) (propietario ?n))
     ?fact <- (seleccionado ?pos)
     ?cs <- (casilla-seleccionada si)
     =>
@@ -70,12 +70,13 @@
     (unmake-instance ?casilla) ;; Se elimina la instancia para la casilla actual, porque ya se ha utilizado
     (retract ?fact)
     (retract ?cs)
-    (printout t ?s " ha tocado un barco de " ?n  crlf)
+    (printout t ?s " ha dañado a " ?n  crlf)
 )
 
-;; Regla para cuando se selecciona una casilla de tipo mina
-(defrule casilla_mina
-    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (tipo mina))
+;; Regla en la que te dañas a ti mismo, o recibes tu el daño. Para juegos en los que se juega 
+;; en un tablero para ambos jugadores
+(defrule casilla_recibir
+    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion recibir))
     ?jugador <- (object (is-a JUGADOR) (nombre ?n) (jugando si) (vidas ?v))
     ?fact <- (seleccionado ?pos)
     ?cs <- (casilla-seleccionada si)
@@ -85,7 +86,7 @@
     (unmake-instance ?casilla) ;; Se elimina la instancia para la casilla actual, porque ya se ha utilizado
     (retract ?fact)
     (retract ?cs)
-    (printout t ?n " ha pisado una mina."  crlf)
+    (printout t ?n " ha recibido daño"  crlf)
 )
 
 ;; Regla para cuando se selecciona una casilla cuya accion hace que el turno lo mantenga el mismo jugador

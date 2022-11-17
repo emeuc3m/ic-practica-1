@@ -19,9 +19,7 @@
 ;; que se utiliza para saber cuando ha perdido un jugador
 (defclass JUGADOR (is-a USER)
     (slot nombre
-        (type SYMBOL)
-        (allowed-values robot niño)
-        (default ?NONE))
+        (type SYMBOL))
     (slot jugando
         (type SYMBOL)
         (allowed-values si no)
@@ -40,8 +38,6 @@
     )
     (slot tipo
         (type SYMBOL)
-        (allowed-values barco agua bandera mina numero)
-        (default ?NONE)
     )
     (slot propietario
         (type SYMBOL)
@@ -50,7 +46,7 @@
     )
     (slot accion
         (type SYMBOL)
-        (allowed-values cambiar seguir daño)
+        (allowed-values cambiar seguir dañar recibir)
         (default ?NONE)
     )
 )
