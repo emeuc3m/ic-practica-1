@@ -1,4 +1,5 @@
-;; BUSCAMINAS - DESPISTADO
+;; JUEGO: BUSCAMINAS - PERSONALIDAD: DESPISTADO
+;; EN esta prueba hemos incluido mas casillas de tipo numero que de tipo bandera
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si))
         (of JUGADOR (nombre niño) (jugando no))

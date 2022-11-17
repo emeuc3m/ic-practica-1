@@ -1,4 +1,5 @@
-;; BUSCAMINAS - PESIMISTA
+;; JUEGO: BUSCAMINAS - PERSONALIDAD: PESIMISTA
+;; EN esta prueba hemos incluido mas casillas del tipo bandera 
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si))
         (of JUGADOR (nombre niño) (jugando no))

@@ -1,4 +1,5 @@
-;; HUNDIR LA FLOTA - DESPISTADO
+;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: DESPISTADO
+;; En esta prueba lo que buscamos es probar el funcionamiento de hundir la flota con una ejecución simple
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 3))
         (of JUGADOR (nombre niño) (jugando no) (vidas 3))

@@ -1,4 +1,6 @@
-;; BUSCAMINAS - INDECISO
+;; JUEGO: BUSCAMINAS - PERSONALIDAD: INDECISO
+;; En esta prueba hemos optado por incluir más de una mina para ver si el juego termina antes, 
+;; por el hecho de tener mas minas
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si))
         (of JUGADOR (nombre niño) (jugando no))

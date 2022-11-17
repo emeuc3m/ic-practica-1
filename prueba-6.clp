@@ -1,4 +1,5 @@
-;; HUNDIR LA FLOTA - LLORON
+;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: LLORON
+;; En esta prueba hemos incluido muchas más casillas de tipo agua que barcos
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 4))
         (of JUGADOR (nombre niño) (jugando no) (vidas 4))

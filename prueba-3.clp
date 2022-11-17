@@ -1,4 +1,5 @@
-;; BUSCAMINAS - IMPACIENTE
+;; JUEGO: BUSCAMINAS - PERSONALIDAD: IMPACIENTE
+;; En esta prueba queremos ver que tal funciona el juego con mas banderas que numeros
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si))
         (of JUGADOR (nombre niño) (jugando no))

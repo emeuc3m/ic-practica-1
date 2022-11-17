@@ -1,16 +1,11 @@
-#Cargar el archivo con clips -f run.bat
-#Cambiar los nombres por los de vuestros archivos
-#Podéis incluir todos los comandos clips que queráis ejecutar
-# 'focus' debería mostrar solo los prints, que son volcados a salida.txt con 'dribble-on'
-#seed inicializa el random para que no saque siempre las mismas secuencias
-
+(clear)
 (load ontologia.clp)
 (load reglas.clp)
-(load prueba-1.clp)
+(load prueba-10.clp)
 (seed (integer (time))) 
 (set-strategy random)
 (watch focus) 
 (reset)
-(dribble-on salida.txt)
+(dribble-on salidas/salida-prueba-10.txt)
 (run)
 (dribble-off)

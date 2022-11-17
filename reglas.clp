@@ -3,8 +3,6 @@
     (declare (salience 50)) ;; Se le da prioridad para que se ejecute antes que el resto de reglas, excepto la parada
     (not (iniciado si))
     =>
-    (set-strategy random)
-    (dribble-on "./salidas/salida-prueba-X.txt")
     (assert (iniciado si))
     (printout t "Iniciando juego" crlf)
 )
@@ -18,7 +16,6 @@
     (test (> ?v 0))
     =>
     (printout t ?p " ha perdido y " ?g " ha ganado" crlf)
-    (dribble-off)
     (halt)
 )
 
@@ -29,7 +26,6 @@
     ?per <- (object (is-a PERSONALIDAD) (paciencia 0))
     =>
     (printout t "La sesión se para porque el niño ha reaccionado negativamente demasiadas veces." crlf)
-    (dribble-off)
     (halt)
 )
 

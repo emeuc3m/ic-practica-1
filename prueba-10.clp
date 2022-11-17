@@ -1,4 +1,5 @@
-;; HUNDIR LA FLOTA - INDECISO
+;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: INDECISO
+;; En esta prueba el jugador robot tiene muchas menos casillas que el niño
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))
         (of JUGADOR (nombre niño) (jugando no) (vidas 4))

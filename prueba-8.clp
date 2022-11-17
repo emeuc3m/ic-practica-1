@@ -1,4 +1,5 @@
-;; HUNDIR LA FLOTA - IMPACIENTE
+;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: IMPACIENTE
+;; En esta prueba hemos incluido muchas mas casillas para el robot, que para el niño
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))
         (of JUGADOR (nombre niño) (jugando no) (vidas 4))

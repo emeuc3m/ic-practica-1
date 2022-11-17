@@ -1,4 +1,5 @@
-;; HUNDIR LA FLOTA - PESIMISTA
+;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: PESIMISTA
+;; En esta prueba queremos ver que tal funciona hundir la flota con casi el doble de barcos
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))
         (of JUGADOR (nombre niño) (jugando no) (vidas 7))
