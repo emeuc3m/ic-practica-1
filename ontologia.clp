@@ -53,4 +53,10 @@
         (allowed-values cambiar seguir dañar recibir)
         (default ?NONE)
     )
+    ;; Sirve para identificar qué jugador (el que está jugando o el que no) afecta si se selecciona la casilla
+    (slot afecta 
+        (type SYMBOL)
+        (allowed-values si no)
+        (default si)
+    )
 )

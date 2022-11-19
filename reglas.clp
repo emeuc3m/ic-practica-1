@@ -29,6 +29,7 @@
 )
 ;; Regla especial para ejecutar cuando la paciencia llega a un número determinado
 (defrule intervencion-personalidad
+    (object (is-a JUGADOR) (nombre niño) (jugando si))
     ?robot <- (object (is-a JUGADOR) (nombre robot) (vidas ?v))
     ?per <- (object (is-a PERSONALIDAD) (reaccion ?r) (correccion ?c) (paciencia 3) (intervencion ?i))
     (not (intervencion si))
@@ -42,6 +43,7 @@
 ;; Regla para ejecutar las personalidades y las correcciones en las diferentes pruebas que vamos a ejecutar
 (defrule ejecutar_personalidad
     ?per <- (object (is-a PERSONALIDAD) (reaccion ?r) (correccion ?c) (paciencia ?pac))
+    (object (is-a JUGADOR) (nombre niño) (jugando si)) ;; Se ejecuta solo en el turno del niño
     ?f <- (personalidad si) ;; Se guarda en una variable el hecho personalidad
     (not (casilla-seleccionada si)) ;; Se comprueba que el hecho casilla-seleccionada no es si
     =>
@@ -68,39 +70,18 @@
 )
 
 ;; Regla en la que se daña al oponente, para juegos en los que se juega con dos tableros
-(defrule casilla_dañar
-    ?jugadorsi <- (object (is-a JUGADOR) (nombre ?s) (jugando si)) ;; Jugador que esta jugando
-    ?jugadorno <- (object (is-a JUGADOR) (nombre ?n) (jugando no) (vidas ?v)) ;; Jugadro que no esta jugando
-    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion dañar) (propietario ?n))
+(defrule casilla_daño
+    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion dañar) (afecta ?a))
+    ?jugador <- (object (is-a JUGADOR) (nombre ?n) (jugando ?a) (vidas ?v)) ;; Jugador que esta jugando
     ?fact <- (seleccionado ?pos)
     ?cs <- (casilla-seleccionada si)
     =>
-    (modify-instance ?jugadorno (vidas (- ?v 1))) ;; Se resta una vida al jugador que no esta jugando, porque el 
-    ;; contrario le ha dado a un barco
+    (modify-instance ?jugador (vidas (- ?v 1))) ;; Se resta una vida al jugador que afecta la casilla
     (unmake-instance ?casilla) ;; Se elimina la instancia para la casilla actual, porque ya se ha utilizado
     (retract ?fact)
     (retract ?cs)
-    (printout t ?s " ha tocado un barco de " ?n  crlf)
     (printout t "Vidas del jugador " ?n ": " (- ?v 1) crlf)
 )
-
-;; Regla en la que te dañas a ti mismo, o recibes tu el daño. Para juegos en los que se juega 
-;; en un tablero para ambos jugadores
-(defrule casilla_recibir
-    ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion recibir))
-    ?jugador <- (object (is-a JUGADOR) (nombre ?n) (jugando si) (vidas ?v))
-    ?fact <- (seleccionado ?pos)
-    ?cs <- (casilla-seleccionada si)
-    =>
-    (modify-instance ?jugador (vidas (- ?v 1))) ;; Se resta una vida al jugador, porque el 
-    ;; contrario le ha dado a una mina y por lo tanto ha perdido la partida
-    (unmake-instance ?casilla) ;; Se elimina la instancia para la casilla actual, porque ya se ha utilizado
-    (retract ?fact)
-    (retract ?cs)
-    (printout t ?n " ha pisado una mina"  crlf)
-    (printout t "Vidas del jugador " ?n ": " (- ?v 1) crlf)
-)
-
 ;; Regla para cuando se selecciona una casilla cuya accion hace que el turno lo mantenga el mismo jugador
 (defrule casilla_seguir
     ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion seguir))
