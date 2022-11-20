@@ -1,40 +1,45 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-4.txt)
 Iniciando juego
-robot ha seleccionado: agua
-Pasando turno de robot a niño
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: agua
-Pasando turno de niño a robot
 robot ha seleccionado: barco
-robot ha tocado un barco de niño
+Vidas del jugador niño: 6
+robot ha seleccionado: barco
+Vidas del jugador niño: 5
+robot ha seleccionado: barco
+Vidas del jugador niño: 4
+robot ha seleccionado: barco
+Vidas del jugador niño: 3
 robot ha seleccionado: agua
 Pasando turno de robot a niño
 niño ha seleccionado: agua
 Pasando turno de niño a robot
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
 robot ha seleccionado: agua
 Pasando turno de robot a niño
+niño ha seleccionado: barco
+Vidas del jugador robot: 6
 niño ha seleccionado: agua
 Pasando turno de niño a robot
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
-El niño estoy seguro que voy a perder esta partida
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: barco
+El niño dice: estoy seguro que voy a perder esta partida
 El robot le dice: tranquilo seguro que me acabas ganando
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
-El niño estoy seguro que voy a perder esta partida
+Vidas del jugador robot: 5
+niño ha seleccionado: barco
+Vidas del jugador robot: 4
+El niño dice: estoy seguro que voy a perder esta partida
 El robot le dice: tranquilo seguro que me acabas ganando
+niño ha seleccionado: agua
+El niño dice: estoy seguro que voy a perder esta partida
+El robot le dice: tranquilo seguro que me acabas ganando
+Pasando turno de niño a robot
 robot ha seleccionado: agua
 Pasando turno de robot a niño
+El niño dice: estoy seguro que voy a perder esta partida
+El robot le dice: tranquilo seguro que me acabas ganando
 niño ha seleccionado: agua
-Pasando turno de niño a robot
-El niño estoy seguro que voy a perder esta partida
+El niño dice: estoy seguro que voy a perder esta partida
 El robot le dice: tranquilo seguro que me acabas ganando
 La sesión se para porque el niño ha reaccionado negativamente demasiadas veces.
+CLIPS> (run)
+(dribble-off)

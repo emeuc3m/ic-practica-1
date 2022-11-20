@@ -1,22 +1,22 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-1.txt)
 Iniciando juego
 robot ha seleccionado: barco
-robot ha tocado un barco de niño
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
+Vidas del jugador niño: 2
 robot ha seleccionado: agua
 Pasando turno de robot a niño
-El niño se despista
-El robot le dice: espabila hombre
+El niño quiere jugar ya
+El robot le dice: tranquilo que ya voy
+niño ha seleccionado: barco
+Vidas del jugador robot: 2
 niño ha seleccionado: agua
+El niño llora
+El robot da animos
 Pasando turno de niño a robot
-El niño se despista
-El robot le dice: espabila hombre
-robot ha seleccionado: agua
-Pasando turno de robot a niño
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-El niño se despista
-El robot le dice: espabila hombre
-La sesión se para porque el niño ha reaccionado negativamente demasiadas veces.
+robot ha seleccionado: barco
+Vidas del jugador niño: 1
+robot ha seleccionado: barco
+Vidas del jugador niño: 0
+niño ha perdido y robot ha ganado
+CLIPS> (run)
+(dribble-off)

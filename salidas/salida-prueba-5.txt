@@ -1,13 +1,9 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-5.txt)
 Iniciando juego
 robot ha seleccionado: bandera
-robot ha seleccionado: numero
-Pasando turno de robot a niño
-niño ha seleccionado: bandera
-niño ha seleccionado: bandera
-El niño no se decide por la casilla que quiere elegir
-El robot le dice: elige la primera que se te venga a la mente
-niño ha seleccionado: numero
-Pasando turno de niño a robot
 robot ha seleccionado: mina
-robot ha pisado una mina.
+Vidas del jugador robot: 0
 robot ha perdido y niño ha ganado
+CLIPS> (run)
+(dribble-off)

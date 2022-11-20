@@ -11,9 +11,9 @@
     )
     (slot paciencia ;; Se pone 3 por defecto, para que se pueda mostrar la personalidad un minimo de 3 veces
         (type INTEGER)
-        (default 3)
+        (default 7)
     )
-    (slot intervencion ;; Número de vidas que se restan cuando se ejecuta una intervención
+    (slot intervencion ;; Número de vidas que se restan cuando se ejecuta una intervencion
         (type INTEGER)
         (default 3)
     )
@@ -50,7 +50,7 @@
     )
     (slot accion
         (type SYMBOL)
-        (allowed-values cambiar seguir dañar recibir)
+        (allowed-values cambiar seguir dañar)
         (default ?NONE)
     )
     ;; Sirve para identificar qué jugador (el que está jugando o el que no) afecta si se selecciona la casilla

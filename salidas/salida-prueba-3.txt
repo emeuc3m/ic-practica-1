@@ -1,15 +1,26 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-3.txt)
 Iniciando juego
-robot ha seleccionado: bandera
 robot ha seleccionado: bandera
 robot ha seleccionado: bandera
 robot ha seleccionado: numero
 Pasando turno de robot a niño
+niño ha seleccionado: numero
 El niño quiere jugar ya
 El robot le dice: tranquilo que ya voy
-niño ha seleccionado: bandera
-niño ha seleccionado: bandera
+Pasando turno de niño a robot
+robot ha seleccionado: bandera
+robot ha seleccionado: numero
+Pasando turno de robot a niño
 niño ha seleccionado: numero
 Pasando turno de niño a robot
-robot ha seleccionado: mina
-robot ha pisado una mina.
+robot ha seleccionado: numero
+Pasando turno de robot a niño
+niño ha seleccionado: bandera
+El niño quiere jugar ya
+El robot le dice: tranquilo que ya voy
+El robot decide intervenir quitándose 3 vidas 
+Vidas del jugador robot: -2
 robot ha perdido y niño ha ganado
+CLIPS> (run)
+(dribble-off)

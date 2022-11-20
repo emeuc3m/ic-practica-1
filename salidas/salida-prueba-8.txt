@@ -1,12 +1,36 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-8.txt)
 Iniciando juego
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: barco
+Vidas del jugador robot: 6
+niño ha seleccionado: barco
+El niño se pone triste y empieza sollozar
+El robot le dice: no llores por un juego
+Vidas del jugador robot: 5
+niño ha seleccionado: barco
 El niño le dice: podrías darte más prisa
 El robot le dice: tienes que aprender a no ser tan impaciente
+Vidas del jugador robot: 4
+niño ha seleccionado: agua
+El niño le dice: podrías darte más prisa
+El robot le dice: tienes que aprender a no ser tan impaciente
+El robot decide intervenir quitándose 2 vidas 
+Vidas del jugador robot: 2
+Pasando turno de niño a robot
 robot ha seleccionado: barco
-robot ha tocado un barco de niño
+Vidas del jugador niño: 6
 robot ha seleccionado: barco
-robot ha tocado un barco de niño
+Vidas del jugador niño: 5
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: barco
+El niño le dice: podrías darte más prisa
+El robot le dice: tienes que aprender a no ser tan impaciente
+Vidas del jugador robot: 1
+niño ha seleccionado: agua
+Pasando turno de niño a robot
 robot ha seleccionado: agua
 Pasando turno de robot a niño
 niño ha seleccionado: agua
@@ -14,11 +38,9 @@ Pasando turno de niño a robot
 robot ha seleccionado: agua
 Pasando turno de robot a niño
 niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: agua
-Pasando turno de niño a robot
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
-niño ha perdido y robot ha ganado
+El niño se pone triste y empieza sollozar
+El robot le dice: no llores por un juego
+Vidas del jugador robot: 0
+robot ha perdido y niño ha ganado
+CLIPS> (run)
+(dribble-off)

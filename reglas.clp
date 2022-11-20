@@ -6,6 +6,7 @@
     (assert (iniciado si))
     (printout t "Iniciando juego" crlf)
 )
+
 ;; Regla de parada, que comprueba que las vidas de un jugador sean 0 y que las vidas del otro jugador son mas de 0.
 ;; Para poder determinar que el jugador contrario ha ganado
 (defrule parada
@@ -18,6 +19,7 @@
     (printout t ?p " ha perdido y " ?g " ha ganado" crlf)
     (halt)
 )
+
 ;; Regla de parada por la personalidad con la misma prioridad que la otra regla de parada. Se comprueba que el slot paciencia de la clase
 ;; personalidad es 0
 (defrule parada-personalidad
@@ -27,6 +29,7 @@
     (printout t "La sesión se para porque el niño ha reaccionado negativamente demasiadas veces." crlf)
     (halt)
 )
+
 ;; Regla especial para ejecutar cuando la paciencia llega a un número determinado
 (defrule intervencion-personalidad
     (object (is-a JUGADOR) (nombre niño) (jugando si))
@@ -45,7 +48,6 @@
     ?per <- (object (is-a PERSONALIDAD) (reaccion ?r) (correccion ?c) (paciencia ?pac))
     (object (is-a JUGADOR) (nombre niño) (jugando si)) ;; Se ejecuta solo en el turno del niño
     ?f <- (personalidad si) ;; Se guarda en una variable el hecho personalidad
-    (not (casilla-seleccionada si)) ;; Se comprueba que el hecho casilla-seleccionada no es si
     =>
     (retract ?f) ;; Se elimina el hecho personalidad de la base de hechos
     (modify-instance ?per (paciencia (- ?pac 1))) ;; Se modifica la instancia de ?per definida en los antecedentes
@@ -82,6 +84,7 @@
     (retract ?cs)
     (printout t "Vidas del jugador " ?n ": " (- ?v 1) crlf)
 )
+
 ;; Regla para cuando se selecciona una casilla cuya accion hace que el turno lo mantenga el mismo jugador
 (defrule casilla_seguir
     ?casilla <- (object (is-a CASILLA) (posicion ?pos) (accion seguir))

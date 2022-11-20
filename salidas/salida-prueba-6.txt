@@ -1,28 +1,48 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-6.txt)
 Iniciando juego
-robot ha seleccionado: agua
-Pasando turno de robot a niño
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: barco
-niño ha tocado un barco de robot
-niño ha seleccionado: agua
-Pasando turno de niño a robot
 robot ha seleccionado: barco
-robot ha tocado un barco de niño
-robot ha seleccionado: barco
-robot ha tocado un barco de niño
+Vidas del jugador niño: 3
 robot ha seleccionado: agua
 Pasando turno de robot a niño
 niño ha seleccionado: agua
+El niño se pone triste y empieza sollozar
+El robot le dice: no llores por un juego
 Pasando turno de niño a robot
 robot ha seleccionado: agua
 Pasando turno de robot a niño
+niño ha seleccionado: agua
 El niño se pone triste y empieza sollozar
 El robot le dice: no llores por un juego
+Pasando turno de niño a robot
+robot ha seleccionado: agua
+Pasando turno de robot a niño
 niño ha seleccionado: barco
-niño ha tocado un barco de robot
-El niño se pone triste y empieza sollozar
-El robot le dice: no llores por un juego
+Vidas del jugador robot: 3
 niño ha seleccionado: barco
-niño ha tocado un barco de robot
-robot ha perdido y niño ha ganado
+Vidas del jugador robot: 2
+niño ha seleccionado: agua
+Pasando turno de niño a robot
+robot ha seleccionado: barco
+Vidas del jugador niño: 2
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: agua
+Pasando turno de niño a robot
+robot ha seleccionado: barco
+Vidas del jugador niño: 1
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: barco
+Vidas del jugador robot: 1
+niño ha seleccionado: agua
+Pasando turno de niño a robot
+robot ha seleccionado: agua
+Pasando turno de robot a niño
+niño ha seleccionado: agua
+Pasando turno de niño a robot
+robot ha seleccionado: barco
+Vidas del jugador niño: 0
+niño ha perdido y robot ha ganado
+CLIPS> (run)
+(dribble-off)
