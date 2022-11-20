@@ -15,8 +15,6 @@ Pasando turno de niño a robot
 robot ha seleccionado: numero
 Pasando turno de robot a niño
 niño ha seleccionado: numero
-El niño llora
-El robot da animos
 Pasando turno de niño a robot
 robot ha seleccionado: bandera
 robot ha seleccionado: bandera
