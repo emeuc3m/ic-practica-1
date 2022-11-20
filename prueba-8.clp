@@ -1,5 +1,6 @@
 ;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: IMPACIENTE
-;; En esta prueba hemos incluido muchas casillas y
+;; En esta prueba hemos incluido muchas instancias de tipo casilla (buscando una ejecucion larga) y todas las personalidades usadas en las 
+;;pruebas, con una paciencia de 5 y restando 2 vidas en la regla de intervencion
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))
         (of JUGADOR (nombre niño) (jugando no) (vidas 7))

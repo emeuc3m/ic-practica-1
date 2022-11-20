@@ -1,6 +1,6 @@
 ;; JUEGO: HUNDIR LA FLOTA
 ;; En esta prueba lo que buscamos es probar el funcionamiento de hundir la flota con una ejecución simple
-;; y con varias personalidades, variando el atributo paciencia e nellas
+;; y con varias personalidades, variando el atributo paciencia en ellas
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 3))
         (of JUGADOR (nombre niño) (jugando no) (vidas 3))

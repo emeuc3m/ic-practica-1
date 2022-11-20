@@ -1,6 +1,6 @@
 ;; JUEGO: HUNDIR LA FLOTA - PERSONALIDAD: PESIMISTA
 ;; En esta prueba queremos ver que el funcionamiento de hundir la flota con el doble de barcos, cambiando el numero de 
-;; vidas que se restan en la regla de intervencion, con el objetivo tambien de conseguir que la paciencia llegeu a 0
+;; vidas que se restan en la regla de intervencion, con el objetivo tambien de conseguir que la paciencia llegue a 0
 ;; para que se pare el juego por la paciencia
 (definstances INSTANCIAS
         (of JUGADOR (nombre robot) (jugando si) (vidas 7))

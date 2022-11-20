@@ -1,0 +1,25 @@
+TRUE
+CLIPS> (dribble-on ./salidas/salida-prueba-2.txt)
+Iniciando juego
+robot ha seleccionado: bandera
+robot ha seleccionado: bandera
+robot ha seleccionado: bandera
+robot ha seleccionado: numero
+Pasando turno de robot a niño
+El niño dice: estoy seguro que voy a perder esta partida
+El robot le dice: tranquilo seguro que me acabas ganando
+niño ha seleccionado: numero
+El niño llora
+El robot da animos
+Pasando turno de niño a robot
+robot ha seleccionado: numero
+Pasando turno de robot a niño
+niño ha seleccionado: numero
+Pasando turno de niño a robot
+robot ha seleccionado: bandera
+robot ha seleccionado: bandera
+robot ha seleccionado: mina
+Vidas del jugador robot: 0
+robot ha perdido y niño ha ganado
+CLIPS> (run)
+(dribble-off)
